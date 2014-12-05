@@ -2,6 +2,8 @@
 
 A devise extension for Duo Security's 2FA tool.
 
+{<img src="https://travis-ci.org/uid0/duo-devise.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/uid0/duo-devise]
+
 == Prerequisites:
 * A Duo Security Account https://duosecurity.com
 
