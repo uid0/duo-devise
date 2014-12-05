@@ -7,7 +7,7 @@ A devise extension for Duo Security's 2FA tool.
 
 == Getting Started:
 
-First, create an initalizer in +config/initalizer/duosecurity.rb+
+First, create an initializer in +config/initalizer/duosecurity.rb+
 
   Duo.integration_key = "DIPZTGZ5VREUTUD2IYIH"
   Duo.secret_key = ENV['DUO_SECRET_KEY'] || "CE1iQU9DEJTu5zdvc7FtDpHxLO9lAz8JHbwioWRm"
@@ -18,7 +18,7 @@ Next, add the gem to your Gemfile:
   gem 'devise'
   gem 'duo-devise'
 
-And then run +bundle install+
+And then run <tt>bundle install</tt>
 
 From there, let's add duo-devise to your rails app:
 
@@ -29,15 +29,15 @@ From there, let's add duo-devise to your rails app:
 
 Finally, configure your Devise User Model:
 
-+rails g duo_devise [MODEL_NAME]+
+<tt>rails g duo_devise [MODEL_NAME]</tt>
 
-Alternatively, you can add the following lines to your +User+ model:
+Alternatively, you can add the following lines to your <tt>User</tt> model:
 
-+devise :duo_authenticatable, :database_authenticatable+
+<tt>devise :duo_authenticatable, :database_authenticatable</tt>
 
 Finally, run the migrations:
 
-+rake db:migrate+
+<tt>rake db:migrate</tt>
 
 There will (hopefully) be more to this, including Custom Views and workflows, but,
 I really have no clue on what/if/how this will actually work today.  Only time will tell.
