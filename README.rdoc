@@ -7,37 +7,37 @@ A devise extension for Duo Security's 2FA tool.
 
 == Getting Started:
 
-First, create an initalizer in `config/initalizer/duosecurity.rb`
+First, create an initalizer in +config/initalizer/duosecurity.rb+
 
-Duo.integration_key = "DIPZTGZ5VREUTUD2IYIH"
-Duo.secret_key = ENV['DUO_SECRET_KEY'] || "CE1iQU9DEJTu5zdvc7FtDpHxLO9lAz8JHbwioWRm"
-Duo.api_hostname = "api-6dc644da.duosecurity.com"
+  Duo.integration_key = "DIPZTGZ5VREUTUD2IYIH"
+  Duo.secret_key = ENV['DUO_SECRET_KEY'] || "CE1iQU9DEJTu5zdvc7FtDpHxLO9lAz8JHbwioWRm"
+  Duo.api_hostname = "api-6dc644da.duosecurity.com"
 
 Next, add the gem to your Gemfile:
 
-gem 'devise'
-gem 'duo-devise'
+  gem 'devise'
+  gem 'duo-devise'
 
-And then run `bundle install`
+And then run +bundle install+
 
 From there, let's add duo-devise to your rails app:
 
-`rails g duo_devise:install
-  --haml: generate the views in HAML (not my strongest language, YMMV)
-  --sass: generate the stylesheets in SASS
-`
+ rails g duo_devise:install
+    --haml: generate the views in HAML (not my strongest language, YMMV)
+    --sass: generate the stylesheets in SASS
+
 
 Finally, configure your Devise User Model:
 
-`rails g duo_devise [MODEL_NAME]`
++rails g duo_devise [MODEL_NAME]+
 
-Alternatively, you can add the following lines to your `User` model:
+Alternatively, you can add the following lines to your +User+ model:
 
-`devise :duo_authenticatable, :database_authenticatable`
++devise :duo_authenticatable, :database_authenticatable+
 
 Finally, run the migrations:
 
-`rake db:migrate`
++rake db:migrate+
 
 There will (hopefully) be more to this, including Custom Views and workflows, but,
 I really have no clue on what/if/how this will actually work today.  Only time will tell.
