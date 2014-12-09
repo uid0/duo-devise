@@ -16,9 +16,9 @@ Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
   gem.name = "duo-devise"
   gem.homepage = "http://github.com/uid0/duo-devise"
-  gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.license = "AGPL 3.0"
+  gem.summary = %Q{Devise plugin for Duo Security}
+  gem.description = %Q{Easily add Duo Security to your 2FA }
   gem.email = "me@ianwilson.org"
   gem.authors = ["Ian Wilson"]
   # dependencies defined in Gemfile
